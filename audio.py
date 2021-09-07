@@ -11,6 +11,7 @@ except ImportError:
 
 os.system('clear')
 os.system('apt install play-audio -y')
+os.system('clear')
 from gtts import *
 
 class color:
@@ -31,4 +32,6 @@ t = raw_input('Inter The Letter:-')
 f = raw_input('Inter The Adio Name:-')
 
 a = gTTS(t)
-a.save(f+'.mp3')
+#a.save(f+'.mp3')
+v = a.save(f)
+os.system('play-audio v.mp3')
